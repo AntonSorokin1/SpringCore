@@ -19,6 +19,6 @@ public class ShopLauncher {
         ApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
 
         DataInitializer initializer = context.getBean(DataInitializer.class);
-        initializer.initData();
+        System.out.println(initializer);
     }
 }
