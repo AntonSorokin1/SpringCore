@@ -1,9 +1,6 @@
 package org.shop;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.shop.api.SellerService;
 import org.shop.data.Seller;
@@ -19,11 +16,19 @@ public class SellerInitializer {
     /** The seller names. */
     private Map<Long, String> sellerNames = Collections.emptyMap();
 
+    public SellerInitializer(SellerService sellerService) {
+        super();
+        this.sellerService = sellerService;
+    }
+
     /**
      * Inits the sellers.
      */
     public void initSellers() {
         List<Seller> sellers = new LinkedList<Seller>();
+        sellerNames = new HashMap<>();
+        sellerNames.put((long)1, "amazon");
+        sellerNames.put((long)2, "samsung");
         
         for (Map.Entry<Long, String> entry : sellerNames.entrySet()) {
             Seller seller = new Seller();

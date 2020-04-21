@@ -17,6 +17,13 @@ public class DataInitializer {
     /** The user initializer. */
     private UserInitializer userInitializer;
 
+    public DataInitializer(SellerInitializer sellerInitializer, ProductInitializer productInitializer, ProposalInitializer proposalInitializer, UserInitializer userInitializer) {
+        this.sellerInitializer = sellerInitializer;
+        this.productInitializer = productInitializer;
+        this.proposalInitializer = proposalInitializer;
+        this.userInitializer = userInitializer;
+    }
+
     /**
      * Inits the data.
      */
