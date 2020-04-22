@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.shop.data.Proposal;
 
-// TODO: Auto-generated Javadoc
 /**
  * Provides repository for manipulating proposals.
  * 

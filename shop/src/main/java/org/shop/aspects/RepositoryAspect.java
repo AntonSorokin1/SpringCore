@@ -17,7 +17,8 @@ public class RepositoryAspect {
     private Logger logger = Logger.getLogger(RepositoryAspect.class.getName());
 
     @Pointcut("execution(* org.shop.repository.*.*(..))")
-    public void repositoryMethod() { }
+    public void repositoryMethod() { // Must be empty
+    }
 
     @Before("repositoryMethod()")
     public void beforeCallRepositoryMethod(JoinPoint jp) {

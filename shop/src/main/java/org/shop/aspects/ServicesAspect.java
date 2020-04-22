@@ -18,7 +18,8 @@ public class ServicesAspect {
     private Logger logger = Logger.getLogger(ServicesAspect.class.getName());
 
     @Pointcut("execution(* org.shop.api.*.*(..))")
-    public void servicesMethod() { }
+    public void servicesMethod() { // Must be empty
+    }
 
     @Before("servicesMethod()")
     public void beforeCallServicesMethod(@NonNull JoinPoint jp) {

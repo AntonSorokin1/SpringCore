@@ -83,38 +83,26 @@ public class Proposal implements Entity {
      */
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
         Proposal other = (Proposal) obj;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        if (price == null) {
-            if (other.price != null)
-                return false;
-        } else if (!price.equals(other.price))
-            return false;
-        if (product == null) {
-            if (other.product != null)
-                return false;
-        } else if (!product.equals(other.product))
-            return false;
-        if (seller == null) {
-            if (other.seller != null)
-                return false;
-        } else if (!seller.equals(other.seller))
-            return false;
-        if (state == null) {
-            if (other.state != null)
-                return false;
-        } else if (!state.equals(other.state))
-            return false;
+
+        if (id == null && other.id != null) return false;
+        if (id != null && !id.equals(other.id)) return false;
+
+        if (price == null && other.price != null) return false;
+        if (price != null && !price.equals(other.price)) return false;
+
+        if (product == null && other.product != null) return false;
+        if (product != null && !product.equals(other.product)) return false;
+
+        if (seller == null && other.seller != null) return false;
+        if (seller != null && !seller.equals(other.seller)) return false;
+
+        if (state == null && other.state != null) return false;
+        if (state != null && !state.equals(other.state)) return false;
+
         return true;
     }
 

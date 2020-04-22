@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.shop.data.User;
 
-// TODO: Auto-generated Javadoc
 /**
  * Provides API for manipulating users.
  * @author Dzmitry_Naskou

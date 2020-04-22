@@ -12,9 +12,6 @@ public class SellerInitializer {
 
     /** The seller service. */
     private SellerService sellerService;
-    
-    /** The seller names. */
-    private Map<Long, String> sellerNames = Collections.emptyMap();
 
     public SellerInitializer(SellerService sellerService) {
         super();
@@ -26,7 +23,7 @@ public class SellerInitializer {
      */
     public void initSellers() {
         List<Seller> sellers = new LinkedList<>();
-        sellerNames = new HashMap<>();
+        Map<Long, String> sellerNames = new HashMap<>();
         sellerNames.put((long)1, "amazon");
         sellerNames.put((long)2, "samsung");
         
