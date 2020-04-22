@@ -25,7 +25,7 @@ public class SellerInitializer {
      * Inits the sellers.
      */
     public void initSellers() {
-        List<Seller> sellers = new LinkedList<Seller>();
+        List<Seller> sellers = new LinkedList<>();
         sellerNames = new HashMap<>();
         sellerNames.put((long)1, "amazon");
         sellerNames.put((long)2, "samsung");

@@ -37,7 +37,7 @@ public class OrderServiceImpl implements OrderService {
     }
     
     public Long createOrder(User user, Proposal... proposals) {
-        List<Item> items = new ArrayList<Item>();
+        List<Item> items = new ArrayList<>();
         
         for (Proposal proposal : proposals) {
             Item item = new Item();

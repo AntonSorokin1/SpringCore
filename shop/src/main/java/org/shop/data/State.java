@@ -22,7 +22,7 @@ public final class State implements Entity {
     private static final List<State> PROPOSAL_STATES;
     
     static {
-        List<State> states = new ArrayList<State>(3);
+        List<State> states = new ArrayList<>(3);
         states.add(ACTIVE_PROPOSAL);
         states.add(NOT_ACTIVE_PROPOSAL);
         
@@ -85,11 +85,8 @@ public final class State implements Entity {
         } else if (!id.equals(other.id))
             return false;
         if (name == null) {
-            if (other.name != null)
-                return false;
-        } else if (!name.equals(other.name))
-            return false;
-        return true;
+            return other.name == null;
+        } else return name.equals(other.name);
     }
 
     /* (non-Javadoc)
